@@ -1,0 +1,8 @@
+#SPDX-License-Identifier: MIT-0
+galaxy_info:
+  author: Johnny Cederholm
+  description: Role for applying Gnome settings
+  license: MIT
+  min_ansible_version: 2.19.3
+  galaxy_tags: []
+dependencies: []
