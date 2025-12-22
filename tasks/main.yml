@@ -4,7 +4,6 @@
   ansible.builtin.apt:
     name: dconf-cli
     state: present
-  become: true
 
 - name: Apply settings
   community.general.dconf:
