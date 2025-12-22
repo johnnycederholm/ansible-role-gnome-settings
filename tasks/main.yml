@@ -1,5 +1,5 @@
 #SPDX-License-Identifier: MIT-0
----
+---   
 - name: Install dconf
   ansible.builtin.apt:
     name: dconf-cli
@@ -7,6 +7,6 @@
 
 - name: Apply settings
   community.general.dconf:
-    key: "{{ name }}"
-    value: "{{ value }}"
+    key: "{{ item.name }}"
+    value: "{{ item.value }}"
   loop: "{{ settings }}"
