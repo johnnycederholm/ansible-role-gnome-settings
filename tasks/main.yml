@@ -1,12 +1,13 @@
 #SPDX-License-Identifier: MIT-0
----   
+---
 - name: Install dconf
   ansible.builtin.apt:
     name: dconf-cli
     state: present
+  become: true
 
 - name: Apply settings
   community.general.dconf:
     key: "{{ item.name }}"
     value: "{{ item.value }}"
-  loop: "{{ settings }}"
+  loop: "{{ gnome_settings }}"
